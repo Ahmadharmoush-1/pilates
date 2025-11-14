@@ -3,11 +3,35 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1763143441076,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1763144482447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import WaveDivider from './WaveDivider';\r\n import beginnersImage from '@/assets/class-beginners.jpg';\r\n import openLevelImage from '@/assets/class-open-level.jpg';\r\n import activeOverImage from '@/assets/class-active-over.jpg';\r\n-import boxilatesImage from '@/assets/class-boxilates.jpg';\r\n+import boxilatesImage from 'C:\\Users\\GamingCorner\\Desktop\\code\\pilates\\src\\assets\\class-boxilates.jpg';\r\n \r\n const ClassTypesSection = () => {\r\n   const classes = [\r\n     {\r\n"
+                },
+                {
+                    "date": 1763144488746,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import WaveDivider from './WaveDivider';\r\n import beginnersImage from '@/assets/class-beginners.jpg';\r\n import openLevelImage from '@/assets/class-open-level.jpg';\r\n import activeOverImage from '@/assets/class-active-over.jpg';\r\n-import boxilatesImage from 'C:\\Users\\GamingCorner\\Desktop\\code\\pilates\\src\\assets\\class-boxilates.jpg';\r\n+import boxilatesImage from '\\assets\\class-boxilates.jpg';\r\n \r\n const ClassTypesSection = () => {\r\n   const classes = [\r\n     {\r\n"
+                },
+                {
+                    "date": 1763144494714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import WaveDivider from './WaveDivider';\r\n import beginnersImage from '@/assets/class-beginners.jpg';\r\n import openLevelImage from '@/assets/class-open-level.jpg';\r\n import activeOverImage from '@/assets/class-active-over.jpg';\r\n-import boxilatesImage from '\\assets\\class-boxilates.jpg';\r\n+import boxilatesImage from '/assets/class-boxilates.jpg';\r\n \r\n const ClassTypesSection = () => {\r\n   const classes = [\r\n     {\r\n"
+                },
+                {
+                    "date": 1763144505781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import WaveDivider from './WaveDivider';\r\n import beginnersImage from '@/assets/class-beginners.jpg';\r\n import openLevelImage from '@/assets/class-open-level.jpg';\r\n import activeOverImage from '@/assets/class-active-over.jpg';\r\n-import boxilatesImage from '/assets/class-boxilates.jpg';\r\n+// import boxilatesImage from '@/assets/class-boxilates.jpg';\r\n \r\n const ClassTypesSection = () => {\r\n   const classes = [\r\n     {\r\n"
+                },
+                {
+                    "date": 1763144531560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,18 +27,18 @@\n       price: '$35',\r\n     },\r\n     {\r\n       name: 'Active Over Pilates',\r\n-      image: activeOverImage,\r\n+    //   image: activeOverImage,\r\n       description: 'Designed for active adults 50+. Focus on mobility, balance, and strength.',\r\n       schedule: 'Mon, Wed',\r\n       time: '2:00 PM',\r\n       duration: '45 min',\r\n       price: '$28',\r\n     },\r\n     {\r\n       name: 'Boxilates',\r\n-      image: boxilatesImage,\r\n+    //   image: boxilatesImage,\r\n       description: 'A fusion of boxing and Pilates. High-energy cardio meets core strengthening.',\r\n       schedule: 'Thu, Sat',\r\n       time: '6:00 PM',\r\n       duration: '60 min',\r\n"
+                },
+                {
+                    "date": 1763144541037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,18 +9,18 @@\n const ClassTypesSection = () => {\r\n   const classes = [\r\n     {\r\n       name: 'Beginners Pilates',\r\n-      image: beginnersImage,\r\n+    //   image: beginnersImage,\r\n       description: 'Perfect for those new to Pilates. Learn the fundamentals in a supportive environment.',\r\n       schedule: 'Mon, Wed, Fri',\r\n       time: '9:00 AM',\r\n       duration: '50 min',\r\n       price: '$30',\r\n     },\r\n     {\r\n       name: 'Open Level Pilates',\r\n-      image: openLevelImage,\r\n+    //   image: openLevelImage,\r\n       description: 'For all levels. Challenge yourself with varied sequences and creative flows.',\r\n       schedule: 'Tue, Thu, Sat',\r\n       time: '10:30 AM',\r\n       duration: '50 min',\r\n@@ -120,9 +120,9 @@\n               transition={{ type: \"spring\", stiffness: 300, damping: 20 }}\r\n             >\r\n               <div className=\"aspect-square overflow-hidden relative\">\r\n                 <motion.img\r\n-                  src={classItem.image}\r\n+                //   src={classItem.image}\r\n                   alt={classItem.name}\r\n                   className=\"w-full h-full object-cover\"\r\n                   whileHover={{ scale: 1.1 }}\r\n                   transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}\r\n"
                 }
             ],
             "date": 1763143441076,

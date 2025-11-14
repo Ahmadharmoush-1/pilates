@@ -4,13 +4,13 @@ import WaveDivider from './WaveDivider';
 import beginnersImage from '@/assets/class-beginners.jpg';
 import openLevelImage from '@/assets/class-open-level.jpg';
 import activeOverImage from '@/assets/class-active-over.jpg';
-import boxilatesImage from '@/assets/class-boxilates.jpg';
+// import boxilatesImage from '@/assets/class-boxilates.jpg';
 
 const ClassTypesSection = () => {
   const classes = [
     {
       name: 'Beginners Pilates',
-      image: beginnersImage,
+    //   image: beginnersImage,
       description: 'Perfect for those new to Pilates. Learn the fundamentals in a supportive environment.',
       schedule: 'Mon, Wed, Fri',
       time: '9:00 AM',
@@ -19,7 +19,7 @@ const ClassTypesSection = () => {
     },
     {
       name: 'Open Level Pilates',
-      image: openLevelImage,
+    //   image: openLevelImage,
       description: 'For all levels. Challenge yourself with varied sequences and creative flows.',
       schedule: 'Tue, Thu, Sat',
       time: '10:30 AM',
@@ -28,7 +28,7 @@ const ClassTypesSection = () => {
     },
     {
       name: 'Active Over Pilates',
-      image: activeOverImage,
+    //   image: activeOverImage,
       description: 'Designed for active adults 50+. Focus on mobility, balance, and strength.',
       schedule: 'Mon, Wed',
       time: '2:00 PM',
@@ -37,7 +37,7 @@ const ClassTypesSection = () => {
     },
     {
       name: 'Boxilates',
-      image: boxilatesImage,
+    //   image: boxilatesImage,
       description: 'A fusion of boxing and Pilates. High-energy cardio meets core strengthening.',
       schedule: 'Thu, Sat',
       time: '6:00 PM',
@@ -121,7 +121,7 @@ const ClassTypesSection = () => {
             >
               <div className="aspect-square overflow-hidden relative">
                 <motion.img
-                  src={classItem.image}
+                //   src={classItem.image}
                   alt={classItem.name}
                   className="w-full h-full object-cover"
                   whileHover={{ scale: 1.1 }}
