@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/hooks/useScrollReveal.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1763143512030,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1763143512030,
+            "name": "Commit-0",
+            "content": "import { useEffect, useRef, useState } from 'react';\r\n\r\ninterface UseScrollRevealOptions {\r\n  threshold?: number;\r\n  rootMargin?: string;\r\n  triggerOnce?: boolean;\r\n}\r\n\r\nexport const useScrollReveal = (options: UseScrollRevealOptions = {}) => {\r\n  const { threshold = 0.1, rootMargin = '0px', triggerOnce = true } = options;\r\n  const ref = useRef<HTMLDivElement>(null);\r\n  const [isVisible, setIsVisible] = useState(false);\r\n\r\n  useEffect(() => {\r\n    const element = ref.current;\r\n    if (!element) return;\r\n\r\n    const observer = new IntersectionObserver(\r\n      ([entry]) => {\r\n        if (entry.isIntersecting) {\r\n          setIsVisible(true);\r\n          if (triggerOnce) {\r\n            observer.unobserve(element);\r\n          }\r\n        } else if (!triggerOnce) {\r\n          setIsVisible(false);\r\n        }\r\n      },\r\n      { threshold, rootMargin }\r\n    );\r\n\r\n    observer.observe(element);\r\n\r\n    return () => {\r\n      observer.disconnect();\r\n    };\r\n  }, [threshold, rootMargin, triggerOnce]);\r\n\r\n  return { ref, isVisible };\r\n};\r\n"
+        }
+    ]
+}

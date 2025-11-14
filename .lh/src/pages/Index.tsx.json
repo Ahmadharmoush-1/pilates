@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/pages/Index.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1763143525184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1763143525184,
+            "name": "Commit-0",
+            "content": "import Header from '@/components/Header';\r\nimport HeroSection from '@/components/HeroSection';\r\nimport FeaturesSection from '@/components/FeaturesSection';\r\nimport AboutSection from '@/components/AboutSection';\r\nimport ClassTypesSection from '@/components/ClassTypesSection';\r\nimport ScheduleSection from '@/components/ScheduleSection';\r\nimport AppSection from '@/components/AppSection';\r\nimport Footer from '@/components/Footer';\r\n\r\nconst Index = () => {\r\n  return (\r\n    <div className=\"min-h-screen\">\r\n      <Header />\r\n      <main>\r\n        <HeroSection />\r\n        <FeaturesSection />\r\n        <AboutSection />\r\n        <ClassTypesSection />\r\n        <ScheduleSection />\r\n        <AppSection />\r\n      </main>\r\n      <Footer />\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default Index;"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/AnimatedSection.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1763143425422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1763143425422,
+            "name": "Commit-0",
+            "content": "import { motion } from 'framer-motion';\r\nimport { ReactNode } from 'react';\r\nimport { useScrollReveal } from '@/hooks/useScrollReveal';\r\n\r\ninterface AnimatedSectionProps {\r\n  children: ReactNode;\r\n  className?: string;\r\n  delay?: number;\r\n  direction?: 'up' | 'down' | 'left' | 'right';\r\n}\r\n\r\nconst AnimatedSection = ({ \r\n  children, \r\n  className = '', \r\n  delay = 0,\r\n  direction = 'up' \r\n}: AnimatedSectionProps) => {\r\n  const { ref, isVisible } = useScrollReveal({ threshold: 0.1 });\r\n\r\n  const directionOffset = {\r\n    up: { y: 40, x: 0 },\r\n    down: { y: -40, x: 0 },\r\n    left: { y: 0, x: 40 },\r\n    right: { y: 0, x: -40 },\r\n  };\r\n\r\n  return (\r\n    <motion.div\r\n      ref={ref}\r\n      initial={{ \r\n        opacity: 0, \r\n        ...directionOffset[direction]\r\n      }}\r\n      animate={isVisible ? { \r\n        opacity: 1, \r\n        y: 0,\r\n        x: 0 \r\n      } : {}}\r\n      transition={{\r\n        duration: 0.8,\r\n        delay,\r\n        ease: [0.25, 0.46, 0.45, 0.94],\r\n      }}\r\n      className={className}\r\n    >\r\n      {children}\r\n    </motion.div>\r\n  );\r\n};\r\n\r\nexport default AnimatedSection;\r\n"
+        }
+    ]
+}
