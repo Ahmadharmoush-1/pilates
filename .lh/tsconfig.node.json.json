@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1763143633145,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1767797177781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,5 +18,5 @@\n     \"noUnusedParameters\": false,\n     \"noFallthroughCasesInSwitch\": true\n   },\n   \"include\": [\"vite.config.ts\"]\n-}\n\\ No newline at end of file\n+}\n"
                 }
             ],
             "date": 1763143633145,

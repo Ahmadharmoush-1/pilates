@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1763143625968,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1767797169514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,24 @@\n {\n-  \"files\": [],\n-  \"references\": [{ \"path\": \"./tsconfig.app.json\" }, { \"path\": \"./tsconfig.node.json\" }],\n   \"compilerOptions\": {\n-    \"baseUrl\": \".\",\n+    \"allowJs\": true,\n+    \"noImplicitAny\": false,\n+    \"noUnusedLocals\": false,\n+    \"noUnusedParameters\": false,\n     \"paths\": {\n-      \"@/*\": [\"./src/*\"]\n+      \"@/*\": [\n+        \"./src/*\"\n+      ]\n     },\n-    \"noImplicitAny\": false,\n-    \"noUnusedParameters\": false,\n     \"skipLibCheck\": true,\n-    \"allowJs\": true,\n-    \"noUnusedLocals\": false,\n     \"strictNullChecks\": false\n-  }\n-}\n+  },\n+  \"files\": [],\n+  \"references\": [\n+    {\n+      \"path\": \"./tsconfig.app.json\"\n+    },\n+    {\n+      \"path\": \"./tsconfig.node.json\"\n+    }\n+  ]\n+}\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1763143625968,

@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1763143619224,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1767797153931,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,30 +1,32 @@\n {\n   \"compilerOptions\": {\n-    \"target\": \"ES2020\",\n-    \"useDefineForClassFields\": true,\n-    \"lib\": [\"ES2020\", \"DOM\", \"DOM.Iterable\"],\n-    \"module\": \"ESNext\",\n-    \"skipLibCheck\": true,\n-\n-    /* Bundler mode */\n-    \"moduleResolution\": \"bundler\",\n     \"allowImportingTsExtensions\": true,\n     \"isolatedModules\": true,\n+    \"jsx\": \"react-jsx\",\n+    \"lib\": [\n+      \"ES2020\",\n+      \"DOM\",\n+      \"DOM.Iterable\"\n+    ],\n+    \"module\": \"ESNext\",\n     \"moduleDetection\": \"force\",\n+    \"moduleResolution\": \"bundler\",\n     \"noEmit\": true,\n-    \"jsx\": \"react-jsx\",\n-\n-    /* Linting */\n-    \"strict\": false,\n+    \"noFallthroughCasesInSwitch\": false,\n+    \"noImplicitAny\": false,\n     \"noUnusedLocals\": false,\n     \"noUnusedParameters\": false,\n-    \"noImplicitAny\": false,\n-    \"noFallthroughCasesInSwitch\": false,\n-\n-    \"baseUrl\": \".\",\n     \"paths\": {\n-      \"@/*\": [\"./src/*\"]\n-    }\n+      \"@/*\": [\n+        \"./src/*\"\n+      ]\n+    },\n+    \"skipLibCheck\": true,\n+    \"strict\": false,\n+    \"target\": \"ES2020\",\n+    \"useDefineForClassFields\": true\n   },\n-  \"include\": [\"src\"]\n-}\n+  \"include\": [\n+    \"src\"\n+  ]\n+}\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1763143619224,

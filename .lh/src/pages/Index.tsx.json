@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1763143525184,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1767797030319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,27 +1,33 @@\n-import Header from '@/components/Header';\r\n-import HeroSection from '@/components/HeroSection';\r\n-import FeaturesSection from '@/components/FeaturesSection';\r\n-import AboutSection from '@/components/AboutSection';\r\n-import ClassTypesSection from '@/components/ClassTypesSection';\r\n-import ScheduleSection from '@/components/ScheduleSection';\r\n-import AppSection from '@/components/AppSection';\r\n-import Footer from '@/components/Footer';\r\n+import Navbar from \"@/components/Navbar\";\r\n+import HeroSection from \"@/components/HeroSection\";\r\n+import AuthoritySection from \"@/components/AuthoritySection\";\r\n+import AboutSection from \"@/components/AboutSection\";\r\n+import ServicesSection from \"@/components/ServicesSection\";\r\n+import GallerySection from \"@/components/GallerySection\";\r\n+import WhyChooseSection from \"@/components/WhyChooseSection\";\r\n+import TestimonialsSection from \"@/components/TestimonialsSection\";\r\n+import BookingSection from \"@/components/BookingSection\";\r\n+import ContactSection from \"@/components/ContactSection\";\r\n+import Footer from \"@/components/Footer\";\r\n+import FloatingButtons from \"@/components/FloatingButtons\";\r\n \r\n const Index = () => {\r\n   return (\r\n-    <div className=\"min-h-screen\">\r\n-      <Header />\r\n-      <main>\r\n-        <HeroSection />\r\n\\ No newline at end of file\n-        <FeaturesSection />\r\n-        <AboutSection />\r\n-        <ClassTypesSection />\r\n-        <ScheduleSection />\r\n-        <AppSection />\r\n-      </main>\r\n+    <main className=\"relative\">\r\n+      <Navbar />\r\n+      <HeroSection />\r\n+      <AuthoritySection />\r\n+      <AboutSection />\r\n+      <ServicesSection />\r\n+      <GallerySection />\r\n+      <WhyChooseSection />\r\n+      <TestimonialsSection />\r\n+      <BookingSection />\r\n+      <ContactSection />\r\n       <Footer />\r\n-    </div>\r\n+      <FloatingButtons />\r\n+    </main>\r\n   );\r\n };\r\n \r\n-export default Index;\n+export default Index;\r\n"
                 }
             ],
             "date": 1763143525184,

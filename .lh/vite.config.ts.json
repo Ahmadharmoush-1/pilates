@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1763143640309,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1767797195012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,5 +14,5 @@\n     alias: {\n       \"@\": path.resolve(__dirname, \"./src\"),\n     },\n   },\n-}));\n\\ No newline at end of file\n+}));\n"
                 }
             ],
             "date": 1763143640309,

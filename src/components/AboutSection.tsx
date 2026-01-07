@@ -1,119 +1,107 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
-import WaveDivider from './WaveDivider';
-import plantImage from '@/assets/plant-blur.jpg';
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { Check } from "lucide-react";
+
 
 const AboutSection = () => {
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"]
-  });
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const imageY = useTransform(scrollYProgress, [0, 1], [50, -50]);
-  const textY = useTransform(scrollYProgress, [0, 1], [-20, 20]);
+  const highlights = [
+    "Precision-crafted smile transformations",
+    "International recognition & media presence",
+    "Premium E-Max & composite veneers",
+    "Personalized luxury experience",
+    "Trusted by celebrities & public figures",
+  ];
 
   return (
-    <section ref={ref} id="about" className="relative bg-cream section-padding overflow-hidden">
-      <WaveDivider position="top" color="hsl(var(--cream))" />
-      
-      <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section ref={ref} id="about" className="py-20 lg:py-32 bg-background">
+      <div className="luxury-container">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image */}
           <motion.div
-            className="order-2 lg:order-1"
-            initial={{ opacity: 0, x: -60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.8 }}
+            className="relative order-2 lg:order-1"
           >
-            <div className="relative group">
+            <div className="relative">
+              {/* Main Image */}
+              <div className="relative rounded-3xl overflow-hidden shadow-luxury">
+                <img
+                  src='/photos/dralaaelcheikh1.png'
+                  alt="Dr. Alaa El Cheikh - Cosmetic Dentist"
+                  className="w-full h-auto aspect-[3/4] object-cover"
+                />
+              </div>
+              
+              {/* Decorative Card */}
               <motion.div
-                className="absolute -inset-4 bg-sage/10 rounded-3xl blur-2xl"
-                animate={{
-                  scale: [1, 1.1, 1],
-                  rotate: [0, -3, 0],
-                }}
-                transition={{
-                  duration: 6,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-              <motion.div
-                style={{ y: imageY }}
-                className="relative overflow-hidden rounded-3xl shadow-xl"
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="absolute -bottom-6 -right-6 md:bottom-8 md:-right-8 bg-card rounded-2xl p-6 shadow-luxury"
               >
-                <motion.img
-                  src={plantImage}
-                  alt="Calming plant aesthetic"
-                  className="w-full object-cover aspect-square"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-                />
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-br from-sage/10 to-transparent"
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                  transition={{ duration: 0.4 }}
-                />
+                <div className="text-center">
+                  <div className="text-4xl font-serif font-bold text-gold mb-1">15+</div>
+                  <div className="text-sm text-muted-foreground">Years of Excellence</div>
+                </div>
               </motion.div>
+
+              {/* Decorative Elements */}
+              <div className="absolute -top-8 -left-8 w-40 h-40 bg-gold/10 rounded-full blur-3xl" />
+              <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-gold/5 rounded-full blur-2xl" />
             </div>
           </motion.div>
 
           {/* Content */}
           <motion.div
-            className="order-1 lg:order-2 space-y-6"
-            style={{ y: textY }}
-            initial={{ opacity: 0, x: 60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
+            initial={{ opacity: 0, x: 30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="order-1 lg:order-2"
           >
-            <motion.h2
-              className="text-4xl md:text-5xl font-serif font-bold text-cream-foreground"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              Improve your balance and strength
-            </motion.h2>
-            <motion.div
-              className="space-y-4 text-lg text-cream-foreground/80 leading-relaxed"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <motion.p
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-              >
-                Pilates is a low-impact exercise method that focuses on building core strength, 
-                improving flexibility, and enhancing overall body awareness through controlled movements.
-              </motion.p>
-              <motion.p
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-              >
-                Whether you're a complete beginner or an experienced practitioner, our classes are 
-                designed to meet you where you are and help you grow stronger, both physically and mentally.
-              </motion.p>
-              <motion.p
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.7 }}
-              >
-                Join us in our beautiful studio where every session is an opportunity to connect with 
-                your body, breathe deeply, and move with intention.
-              </motion.p>
-            </motion.div>
+            <span className="luxury-badge mb-6">About Dr. Alaa</span>
+            
+            <h2 className="section-title text-foreground mb-6">
+              Artistry Meets
+              <br />
+              <span className="gold-gradient-text">Precision</span>
+            </h2>
+
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              Dr. Alaa El Cheikh is a renowned cosmetic and esthetic dentist 
+              based in Beirut, specializing in luxury smile transformations. 
+              With a meticulous approach to smile design and an unwavering 
+              commitment to excellence, Dr. Alaa has become the trusted choice 
+              for patients seeking world-class cosmetic dentistry.
+            </p>
+
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              At Dr Alaa El Cheikh, every treatment is a work of art—combining 
+              cutting-edge technology with bespoke craftsmanship to create smiles 
+              that are as unique as the individuals who wear them.
+            </p>
+
+            {/* Highlights */}
+            <ul className="space-y-4">
+              {highlights.map((item, index) => (
+                <motion.li
+                  key={item}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                  className="flex items-center gap-3"
+                >
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gold/10 flex items-center justify-center">
+                    <Check className="w-4 h-4 text-gold" />
+                  </div>
+                  <span className="text-foreground">{item}</span>
+                </motion.li>
+              ))}
+            </ul>
           </motion.div>
         </div>
       </div>
